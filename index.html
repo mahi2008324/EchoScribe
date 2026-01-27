@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="previous"><button id="historyBtn"><i class="fa-solid fa-history"></i> History</button></div>
+        <h1 class="title">EchoScribe</h1>
+
+        <div class="header-right">
+            <div class="lang-dropdown">
+                <button class="lang-btn" id="langBtn">
+                    <i class="fa-solid fa-globe"></i> English (US)
+                </button>
+                <ul class="lang-menu">
+                    <li data-lang="en-US">English (US)</li>
+                    <li data-lang="de-DE">German (Germany)</li>
+                    <li data-lang="hi-IN">Hindi (India)</li>
+                    <li data-lang="te-IN">Telugu (India)</li>
+                </ul>
+            </div>
+
+            <button id="themeToggle">
+                <i class="fa-solid fa-moon"></i> Dark
+            </button>
+        </div>
+    </div>
+
+    <div class="info">
+        <textarea id="textshow" placeholder="Speak something..."></textarea>
+    </div>
+
+    <div class="count">Words : 0 | Characters : 0</div>
+    <div class="timer" id="timer">Recording Time: 00:00</div>
+
+    <div class="stats" id="stats">
+        <h3><i class="fa-solid fa-chart-line"></i> Session Statistics</h3>
+        <p id="statTime"><i class="fa-solid fa-clock"></i> Time: 0 mins</p>
+        <p id="statWords"><i class="fa-solid fa-font"></i> Words: 0</p>
+        <p id="statSpeed"><i class="fa-solid fa-tachometer-alt"></i> Speed: 0 WPM</p>
+        <p id="statLang"><i class="fa-solid fa-globe"></i> Language: English (US)</p>
+    </div>
+
+    <div id="indicator" class="indicator">
+        <span class="dot"></span>
+        <span>Listening...</span>
+    </div>
+
+    <div class="btn">
+        <button id="btn"><i class="fa-solid fa-microphone"></i> Start Listening</button>
+        <button id="pause" disabled><i class="fa-solid fa-pause"></i> Pause</button>
+        <button id="reset"><i class="fa-solid fa-arrows-rotate"></i> Reset</button>
+        <button id="manualSave" class="action-btn save-btn">
+    <i class="fa-solid fa-bookmark"></i> Save to History</button>
+        <button id="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button id="download"><i class="fa-solid fa-download"></i> Download</button>
+    </div>
+
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>History Viewer</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            
+            <textarea id="modalText" readonly></textarea>
+            
+            <div class="modal-actions">
+                <button id="copyModalBtn" class="action-btn copy-btn">
+                    <i class="fa-solid fa-copy"></i> Copy Text
+                </button>
+                <button id="closeModalBtn" class="action-btn close-btn">
+                    Close
+                </button>
+                <button id="clearHistoryBtn" class="action-btn clear-btn">
+                    <i class="fa-solid fa-trash"></i> Clear History
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
