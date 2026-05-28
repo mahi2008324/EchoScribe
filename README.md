@@ -71,7 +71,7 @@ git clone https://github.com/yourusername/EchoScribe.git
 
 **Developer:** Maheedhar Kotha
 
-**Project Link:**
+**Project Link:**https://mahi2008324.github.io/EchoScribe/
 
 ---
 
